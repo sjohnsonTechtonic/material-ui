@@ -1,16 +1,32 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 import { grey, blue, blueGrey, red } from '@material-ui/core/colors';
 
-const style = {
+const primaryStyle = {
     palette: {
-        primary: {
-            main: grey[400],
-            text: red[600]
-        },
+        primary: grey,
         secondary: blue,
         accent: blueGrey,
-        textPrimary: red
+        text: {
+            primary: red[100],
+            secondary: blue[100],
+            disabled: blueGrey,
+        }
     },
 };
 
-export default createMuiTheme(style);
+const secondaryStyle = {
+    palette: {
+        primary: blue,
+        secondary: grey,
+        accent: blueGrey,
+        text: {
+            primary: blue[100],
+            secondary: red[100],
+            disabled: blueGrey,
+        }
+    },
+}
+
+export const PrimaryTheme = createMuiTheme(primaryStyle);
+
+export const SecondaryTheme = createMuiTheme(secondaryStyle)

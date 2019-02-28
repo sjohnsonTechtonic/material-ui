@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import style from './theme';
+import {PrimaryTheme, SecondaryTheme} from './theme';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
 
@@ -21,10 +21,10 @@ class App extends Component {
 
   render() {
     return (
-      <MuiThemeProvider theme={style}>
+      <MuiThemeProvider theme={SecondaryTheme}>
         <AppBar id="toolbar" position="sticky">
           <Toolbar color="primary">
-            <Typography color="primary" variant="title">To-Do List</Typography>
+            <Typography color="disabled" variant="title">To-Do List</Typography>
 
             <AddItemModal onTaskAdded={this.handleTaskAdded} className="float-right" />
           </Toolbar>
